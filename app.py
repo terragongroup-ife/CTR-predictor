@@ -14,9 +14,7 @@ app = Flask(__name__)
 
 api = Api(app)
 
-class Base(Resource):
-    def get(self):
-        return {'message': 'I am working fine'}
+
 
 class Predict(Resource):
  
@@ -56,7 +54,7 @@ class Predict(Resource):
 
 
 api.add_resource(Predict, '/api')    
-api.add_resource(Base, '/')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
