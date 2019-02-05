@@ -53,26 +53,7 @@ class Predict(Resource):
 
 
 
-#def get_delay():
-    #clf_path = 'models.pkl'
-    #with open(clf_path, 'rb') as f:
-    #    u = pickle._Unpickler(f)
-    #    u.encoding = 'latin1'
-    #    lr = u.load()
 
-
-    #total_spent = result['spend_total']
-    #custom_class = result['customer_class']
-    #customer_value = result['customer_value']
-    #campaign_type = result['campaign_type']
-    #user_input = [{'total_spent':total_spent}, {'custom_class':custom_class}, {'customer_value':customer_value}, {'campaign_type':campaign_type}]
-    #query = pd.get_dummies(pd.DataFrame(user_input))
-    #query = query.reindex(columns=model_columns, fill_value=0)
-    #prediction = list(lr.predict(query))
-    #return json.dumps({'prediction':prediction})
-    #return json.dumps({'prediction': numpy.int32(prediction[0])}, cls=MyEncoder)
-    #return jsonify({'prediction': str(prediction)})
-    #return jsonify({'prediction': numpy.int32(prediction[0])}, cls=MyEncoder)
 
 api.add_resource(Predict, '/api')    
 api.add_resource(Base, '/')
