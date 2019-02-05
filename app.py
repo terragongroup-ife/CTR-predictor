@@ -1,5 +1,5 @@
 import json
-from flask import Flask, abort,request, render_template,jsonify
+from flask import Flask, abort,request,jsonify
 from flask_restful import reqparse, abort, Api, Resource
 import numpy
 from sklearn.externals import joblib
